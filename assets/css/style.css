@@ -32,16 +32,27 @@ a {
   font-weight: 500;
 }
 /* =================Header================== */
-.header {
+.fixed-header {
+  position: sticky;
+  top: -26px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #e6f0ff;
+  padding-top: 26px;
+}
+.hero-wrap {
   position: relative;
   background: #e6f0ff;
-  height: 100vh;
+  height: calc(100vh - 66px);
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  padding-top: 12px 0;
 }
 
 .navbar ul {
@@ -140,10 +151,22 @@ a {
 }
 
 .clients .images {
-  margin-top: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 70px;
+}
+
+.clients .images a {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 0 42px;
+  border-radius: 12px;
+}
+
+.clients .images a:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* ========== Guide ========== */
